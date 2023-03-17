@@ -1,0 +1,24 @@
+{
+  "name": "rumble-podigee-theme",
+  "version": "1.0.0",
+  "description": "This is the rumble theme for the podigee podcast player",
+  "main": "index.js",
+  "repository": "git@github.com:ruhr24/rumble-podigee-theme.git",
+  "author": "Minh.Doan <minh.doan@rumble.de>",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar-cli": "^3.0.0",
+    "sass": "^1.59.3"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard-scss": "^7.0.1"
+  },
+  "scripts": {
+    "sass:build": "sass scss:files --style=compressed --no-source-map",
+    "sass:watch": "chokidar \"scss/*.scss\" -c \"npm run sass:build\" --initial"
+  }
+}
